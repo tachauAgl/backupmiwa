@@ -1,0 +1,185 @@
+/* layout
+------------------------------------------------------------*/
+body {
+	font-family: $mainFonts;
+	font-size: 1.6rem;
+	line-height: 1.75;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #333;
+	opacity: 0;
+	transition: 0.5s ease-in-out;
+	overflow-x: hidden;
+	@include breakpoint(sp) {
+		font-size: 1.4rem;
+		min-width: 320px;
+	}
+	&.is-hidden {
+		overflow: hidden;
+	}
+}
+// body {
+//     animation: fadeInAnimation ease-in-out 1s;
+//     animation-iteration-count: 1;
+//     animation-fill-mode: forwards;
+// }
+  
+// @keyframes fadeInAnimation {
+//     0% {
+//         opacity: 0;
+//     }
+//     100% {
+//         opacity: 1;
+//      }
+// }
+//-------------------------------------------------------
+main {
+	@include breakpoint(sp) {
+		padding-top: 80px;
+	}
+}
+//-------------------------------------------------------
+.l-container {
+	max-width: 940px;
+	margin: 0 auto;
+	@include breakpoint(bftab) {
+		padding: 0 16px;
+	}
+}
+//-------------------------------------------------------
+.l-wrapper {
+	display: flex;
+	max-width: 1500px;
+	margin: 0 auto;
+	&__side {
+		width: 248px;
+		@include breakpoint(sp) {
+			width: 0;
+		}
+	}
+	&__content {
+		width: calc(100% - 248px);
+		overflow: hidden;
+		@include breakpoint(sp) {
+			width: 100%;
+		}
+	}
+}
+
+//-------------------------------------------------------
+.l-side {
+	padding: 5.8vh 0 0;
+	position: fixed;
+	top: 0;
+	left: auto;
+	right: auto;
+	bottom: 0;
+	width: inherit;
+	max-width: inherit;
+	height: 100vh;
+	// height: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	@include breakpoint(tablets){
+		// padding: 0;
+		height: auto;
+	}
+	@include breakpoint(sp) {
+		overflow-y: auto;
+		display: block;
+		width: 100%;
+		height: auto;
+		max-width: none;
+		z-index: 100;
+		top: 80px;
+		left: 0;
+		bottom: 0;
+		transition: 0.6s ease-in-out;
+		padding: 32px 32px 150px;
+		transform: translateX(100%);
+		background-color: #94c20c;
+		&.is-open {
+			transform: translateX(0);
+			z-index: 100;
+		}
+		.c-info1 {
+			margin-top: 37px;
+			dl {
+				margin-top: 14px;
+			}
+			dt {
+				border: 1px solid #fff;
+			}
+			dd {
+				color: #fff;
+			}
+			ul{
+				margin-top: 11px;
+				li{
+					margin-top: 8px;
+				}
+			}
+			.c-link1 {
+				color: #fff;
+				// margin-top: 14px;
+			}
+		}
+		.c-address1 {
+			margin-top: 12px;
+		}
+	}
+	@include breakpoint(spsmall){
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+	.logo {
+		margin: 0 auto;
+		text-align: center;
+		height: 153px;
+	}
+	.c-navi1 {
+		height: calc(100vh - 233px);
+		@include breakpoint(tablets){
+			height: auto;
+		}
+		@include breakpoint(sp) {
+			height: auto;
+		}
+	}
+}
+
+//-------------------------------------------------------
+.l-wrap {
+	display: flex;
+	@include breakpoint(bftab) {
+		flex-wrap: wrap;
+	}
+	.col1 {
+		width: 50%;
+		background-color: $grey;
+		padding: 68px 78px 76px;
+		@media only screen and (max-width: 1440px){
+			padding: 68px 60px 76px;
+		}
+		@include breakpoint(bftab) {
+			width: 100%;
+			padding: 60px 32px 72px;
+		}
+		&:nth-child(2) {
+			background: $light-green;
+			@include breakpoint(sp) {
+				padding-bottom: 70px;
+			}
+		}
+	}
+}
+
+//-------------------------------------------------------
+.l-content{
+	max-width: 626px;
+	margin: 0 auto;
+	@include breakpoint(tablets){
+		padding: 0 16px;
+	}
+}

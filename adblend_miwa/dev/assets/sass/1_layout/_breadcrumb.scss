@@ -1,0 +1,28 @@
+/* Breadcrumb
+------------------------------------------------------------*/
+.c-breadcrumb {
+    padding: 5px 14px;
+    ol {
+        display: flex;
+        li {
+            position: relative;
+            display: block;
+            padding-left: 2px;
+            letter-spacing: -0.03rem;
+            &:nth-child(n + 2) {
+                &:before {
+                    content: "＞";
+                    font-size: 1.3rem;
+                    color: #999999;
+                }
+            }
+        }
+        a,
+        p,
+        small {
+            display: inline;
+            font-size: 1.3rem;
+            color: $color-gray;
+        }
+    }
+}

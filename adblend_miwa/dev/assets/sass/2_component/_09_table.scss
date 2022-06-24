@@ -1,0 +1,73 @@
+/*------------------------------------------------------------
+table
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-tbl1{
+    border-collapse: collapse;
+    width: 100%;
+
+    th,
+    td {
+        background: $white;
+        border-right: 1px solid #E6E6E6;
+        text-align: center;
+        width: 9.7%;
+        @include breakpoint(sp){
+            width: auto;
+        }
+        &:first-child {
+            width: 27.7%;
+            @include breakpoint(sp){
+                width: 32.1%;
+            }
+        }
+        &:last-child{
+            border-right: none;
+            @include breakpoint(sp){
+                width: 11.8%;
+            }
+        }
+    }
+    th {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 2;
+        padding: 5px 0;
+        @include breakpoint(sp){
+            font-size: 1rem;
+            padding: 6px 0;
+        }
+    }
+    td {
+        font-size: 2.1rem;
+        height: 36px;
+        font-weight: 500;
+        color: $mainColor;
+        letter-spacing: -0.3px;
+        @include breakpoint(sp){
+            font-size: 1.2rem;
+            font-weight: 500;
+            height: 22px;
+        }
+        &:first-child{
+            font-size: 1.6rem;
+            color: #333;
+            @include breakpoint(sp){
+                font-size: 1.2rem;
+                font-weight: 400;
+            }
+        }
+    }
+    tr{
+        @include breakpoint(sp){
+            &:last-child{
+                td{
+                    height: auto;
+                    padding: 5px 0 17px;
+                }
+            }
+        }
+    }
+}

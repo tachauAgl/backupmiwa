@@ -1,0 +1,352 @@
+/*------------------------------------------------------------
+list
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-listnews {
+    position: relative;
+    height: 477px;
+    ul {
+        height: 100%;
+        padding-right: 41px;
+        overflow-y: auto;
+        position: relative;
+        z-index: 2;
+        &::-webkit-scrollbar {
+            cursor: pointer;
+            width: 7px;
+            // background: #E6E6E6;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $mainColor;
+        }
+    }
+    &::after {
+        content: "";
+        width: 2px;
+        height: 100%;
+        background: #e6e6e6;
+        position: absolute;
+        top: 0;
+        right: 3px;
+    }
+    .item {
+        display: block;
+        box-sizing: border-box;
+        border-bottom: 1px solid #e6e6e6;
+        padding: 18px 0;
+    }
+    .timeCat {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 2px;
+        span {
+            display: inline-block;
+            font-size: 1.1rem;
+            background: $mainColor;
+            color: $white;
+            border-radius: 9px;
+            min-width: 56px;
+            line-height: 1;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            padding: 3px 4px 4px;
+            margin-right: 6px;
+            &.persian-green,&.news {
+                background: #00a888;
+            }
+        }
+        time {
+            font-size: 1.4rem;
+            color: $color-gray;
+            letter-spacing: -0.03rem;
+        }
+    }
+    .expand {
+        font-size: 1.6rem;
+        font-weight: 400;
+        letter-spacing: -0.03rem;
+        word-break: break-all;
+        @include breakpoint(sp){
+            font-size: 1.4rem;
+            line-height: 1.71;
+            letter-spacing: 0;
+        }
+        &.temp{
+            margin-bottom: 1px;
+        }
+    }
+    &--mode{
+        height: auto;
+        &:after{
+            content: none;
+        }
+        ul{
+            padding-right: 0;
+        }
+        .item{
+            padding: 30px 0 34px;
+            @include breakpoint(sp){
+                padding: 18px 0;
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-list1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+        width: calc(50% - 10px);
+        @include breakpoint(sp){
+            width: 100%;
+        }
+        a{
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #e6e6e6;
+            padding: 10px 0;
+            
+        }
+        .icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .txt {
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 1.56;
+            flex: 1;
+            padding-left: 8px;
+            letter-spacing: -0.3px;
+            @include breakpoint(sp){
+                font-size: 1.4rem;
+                line-height: 1.75;
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-list2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -32px;
+    @include breakpoint(tablets){
+        margin-right: -15px;
+    }
+    li {
+        width: calc((100% / 3) - 32px);
+        margin-top: 32px;
+        margin-right: 32px;
+        background: $grey;
+        border-radius: 32px;
+        text-align: center;
+        padding: 28px 28px 33px;
+        @include breakpoint(tablets){
+            width: calc(50% - 15px);
+            margin-right: 15px;
+            margin-top: 15px;
+            padding: 16px 16px 17px;
+            border-radius: 16px;
+        }
+        .icon {
+            width: 186px;
+            height: 186px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $white;
+            margin: 0 auto;
+            @include breakpoint(sp){
+                width: 104px;
+                height: 104px;
+            }
+        }
+        .txt {
+            font-size: 1.9rem;
+            font-weight: 500;
+            line-height: 1.5;
+            letter-spacing: -0.5px;
+            margin: 16px 0 0;
+            @include breakpoint(sp){
+                font-size: 1.6rem;
+                margin: 3px 0 0;
+            }
+        }
+    }
+}
+
+//-------------------------------------------------------
+.c-list3 {
+    margin-right: -16px;
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoint(tablets){
+        margin-right: -15px;
+    }
+    li {
+        width: calc(25% - 16px);
+        margin-top: 17px;
+        margin-right: 16px;
+        background: #f7f7f7;
+        padding: 15px 15px 13px 15px;
+        border-radius: 4px;
+        font-size: 1.6rem;
+        line-height: 1.75;
+        letter-spacing: -0.3px;
+        @include breakpoint(tablets){
+            width: calc(50% - 15px);
+            margin-right: 15px;
+            margin-top: 15px;
+            font-size: 1.4rem;
+            padding: 19px 15px 16px 15px;
+            height: 56px;
+            line-height: 1.5;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+//-------------------------------------------------------
+.c-list4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include breakpoint(bftab){
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin: 0 -4px;
+    }
+    li {
+        width: 208px;
+        height: 208px;
+        border-radius: 50%;
+        background: #ffffe8;
+        text-align: center;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        padding: 39px 0 10px;
+        @include breakpoint(bftab){
+            width: auto;
+            height: auto;
+            background: transparent;
+            margin: 0 4px;
+            padding: 0 0 4px;
+            &:nth-child(2){
+                .icon{
+                    img{
+                        height: 45px;
+                    }
+                }
+            }
+        }
+        .icon {
+            height: 90px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include breakpoint(bftab){
+                background: #FFFFE8;
+                border-radius: 50%;
+                width: 96px;
+                height: 96px;
+                img{
+                    height: 56px;
+                    width: auto;
+                }
+            }
+        }
+        .txt {
+            font-size: 1.9rem;
+            font-weight: 500;
+            line-height: 1.4;
+            margin-top: 4px;
+            @include breakpoint(sp){
+                margin-top: 11px;
+            }
+        }
+
+    }
+}
+
+//-------------------------------------------------------
+.c-list5 {
+    li {
+        position: relative;
+        padding-left: 34px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        letter-spacing: -0.3px;
+        @include breakpoint(sp){
+            font-size: 1.4rem;
+            padding-left: 32px;
+            line-height: 1.72;
+        }
+        &::before {
+            content: "";
+            width: 13px;
+            height: 12px;
+            background: url(../img/top/icon-cb.svg) no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 7px;
+            left: 14px;
+        }
+    }
+    &--mode2{
+        display: flex;
+        flex-wrap: wrap;
+        @include breakpoint(sp){
+            display: block;
+        }
+        li{
+            width: 50%;
+            &::before{
+                background: url(../img/top/icon-cb-blk.svg) no-repeat;
+                background-size: contain;
+                position: absolute;
+            }
+            @include breakpoint(sp){
+                width: auto;
+            }
+        }
+    }
+}
+
+.c-list-item{
+    display: flex;
+    margin-right: -12px;
+    @include breakpoint(sp){
+        flex-wrap: wrap;
+        margin-right: -15px;
+    }
+    li{
+        width: calc(25% - 12px);
+        margin-right: 12px;
+        @include breakpoint(sp){
+            width: calc(50% - 15px);
+            margin-right: 15px;
+            margin-top: 15px;
+        }
+    }
+}

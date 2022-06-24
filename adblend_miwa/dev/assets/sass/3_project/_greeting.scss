@@ -1,0 +1,155 @@
+/*------------------------------------------------------------
+Css of greeting page
+------------------------------------------------------------*/
+.p-greeting {
+    &__intro {
+        padding: 84px 0 19px;
+        @include breakpoint(sp) {
+            padding: 40px 0 10px;
+        }
+        .c-imgtext {
+            margin-top: 30px;
+        }
+        .block2 {
+            padding: 38px 0 0;
+            @include breakpoint(sp) {
+                padding: 20px 0 0;
+            }
+            .c-text2 {
+                max-width: none;
+                text-align: left;
+                font-weight: 500;
+                margin: 20px 0 0;
+                letter-spacing: 0;
+                @include breakpoint(sp) {
+                    margin-top: 10px;
+                }
+            }
+            .box {
+                border-top: 1px solid #94c20c;
+                border-bottom: 1px solid #94c20c;
+                margin: 17px 0 18px;
+                padding: 14px 0;
+                @include breakpoint(sp) {
+                    margin: 10px 0;
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+    &__policy {
+        padding: 80px 0 64px;
+        @include breakpoint(sp) {
+            padding: 40px 0;
+        }
+        .detail {
+            margin-top: 36px;
+            @include breakpoint(sp) {
+            }
+        }
+        .c-detail1 {
+            margin-bottom: 40px;
+            @include breakpoint(sp) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__say {
+        background: #f5fae3;
+        .c-ttl4 {
+            font-weight: 500;
+        }
+        .c-text1 {
+            margin-top: 24px;
+            max-width: 616px;
+            @include breakpoint(sp) {
+                margin-top: 12px;
+                max-width: none;
+            }
+        }
+        .inner {
+            position: relative;
+            padding-top: 53px;
+            padding-bottom: 69px;
+            padding-right: 22vw;
+            @include breakpoint(tablets) {
+                padding-right: 30vw;
+            }
+            @include breakpoint(sp) {
+                padding: 25px 16px 0;
+            }
+            .img01 {
+                width: 292px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                @include breakpoint(sp) {
+                    position: relative;
+                    bottom: auto;
+                    right: auto;
+                    width: 100%;
+                    max-width: 292px;
+                    margin-top: 10px;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+    + .c-banLink {
+        padding-top: 54px;
+        @include breakpoint(sp) {
+            padding-top: 33px;
+        }
+    }
+}
+
+.c-detail1 {
+    display: flex;
+    align-items: center;
+    @include breakpoint(sp) {
+        // display: block;
+        align-items: flex-start;
+    }
+    &__circle {
+        width: 157px;
+        height: 158px;
+        border-radius: 50%;
+        background: #f5fae3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.1rem;
+        font-weight: 600;
+        font-family: "Noto Serif JP", serif;
+        flex-shrink: 0;
+        @include breakpoint(sp) {
+            width: 100px;
+            height: 100px;
+            font-size: 1.4rem;
+        }
+    }
+    &__info {
+        padding-left: 32px;
+        @include breakpoint(sp) {
+            padding-left: 16px;
+        }
+        .c-ttl2 {
+            text-align: left;
+            line-height: 1.6;
+            @include breakpoint(sp) {
+                font-size: 1.8rem;
+            }
+        }
+        ul {
+            li {
+                font-size: 1.8rem;
+                font-weight: 500;
+                line-height: 2;
+                letter-spacing: -0.035rem;
+                @include breakpoint(sp) {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}

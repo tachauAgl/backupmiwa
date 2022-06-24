@@ -1,0 +1,123 @@
+/*------------------------------------------------------------
+footer
+------------------------------------------------------------*/
+.c-footer {
+    background: #94c20c;
+    color: #fff;
+    padding: 57px 0 15px;
+    @include breakpoint(sp){
+        padding: 46px 0 15px;
+    }
+    &__wrap {
+        display: flex;
+        @include breakpoint(bftab){
+            display: block;
+            padding: 0 16px;
+            max-width: 940px;
+            margin: 0 auto;
+        }
+        @include breakpoint(sp){
+            max-width: none;
+           
+        }
+        @include breakpoint(spsmall){
+            padding: 0;
+        }
+        .info {
+            width: 50%;
+            @include breakpoint(bftab){
+                width: 100%;
+            }
+            .logo {
+                margin-top: 10px;
+            }
+        }
+        .ca-table {
+            width: 50%;
+            padding-left: 20px;
+            @include breakpoint(bftab){
+                width: 100%;
+                padding: 24px 0 0;
+            }
+            .c-tbl1 {
+                border-top: 1px solid #fff;
+                border-bottom: 1px solid #fff;
+
+                th,
+                td {
+                    background: transparent;
+                    color: #fff !important;
+                    width: auto;
+                    &:first-child {
+                        width: 30%;
+                        @include breakpoint(sp){
+                            width: 32.1%;
+                        }
+                    }
+                    &:last-child {
+                        width: 12.1%;
+                        @include breakpoint(sp){
+                            width: 11.8%;
+                        }
+                    }
+                }
+                th {
+                    line-height: 1.7;
+                }
+                td {
+                    height: 39px;
+                    @include breakpoint(sp){
+                        height: 22px;
+                    }
+                }
+                tr {
+                    &:last-child {
+                        td {
+                            height: auto;
+                            padding: 7px 0 16px;
+                        }
+                    }
+                }
+            }
+            .c-info1 {
+                dl {
+                    @include breakpoint(sp){
+                        margin-top: 12px;
+                    }
+                    dt {
+                        background: transparent;
+                        border: 1px solid #fff;
+                        // padding: 3px 4px 2px;
+                        padding: 0 0 1px 0;
+                    }
+                    dd {
+                        font-size: 1.4rem;
+                        line-height: 1.8;
+                    }
+                }
+                ul{
+                    margin-top: 11px;
+                    // li{
+                    //     margin-top: 11px;
+                    // }
+                }
+                .c-link1 {
+                    // margin-top: 14px;
+                }
+            }
+        }
+    }
+    .copy {
+        font-size: 1.1rem;
+        margin: 27px 0 0;
+        letter-spacing: -0.2px;
+        @include breakpoint(bftab){
+            margin: 27px auto 0;
+            max-width: 940px;
+        }
+        @include breakpoint(sp){
+            max-width: none;
+            padding: 0 16px;
+        }
+    }
+}

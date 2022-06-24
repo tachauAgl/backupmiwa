@@ -1,0 +1,48 @@
+/*------------------------------------------------------------
+text
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-text1{
+    font-size: 1.6rem;
+    letter-spacing: -0.3px;
+    word-break: break-all;
+    @include breakpoint(sp){
+        letter-spacing: 0;
+    }
+    &.medium{
+        font-weight: 500;
+    }
+    &.center{
+        text-align: center;
+    }
+    @include breakpoint(spsmall){
+        font-size: 1.4rem;
+    }
+    .u-yellow{
+        background: #FFE41A;
+    }
+}
+//-------------------------------------------------------
+.c-text2{
+    font-size: 1.8rem;
+    line-height: 1.8;
+    letter-spacing: -0.3px;
+    text-align: center;
+    max-width: 626px;
+    margin: 0 auto;
+    @include breakpoint(sp){
+        font-size: 1.6rem;
+        text-align: left;
+        line-height: 1.75;
+    }
+    &.left{
+        text-align: left;
+    }
+}
+
+.c-note{
+    font-size: 1.3rem;
+    letter-spacing: -0.025rem;
+}

@@ -1,0 +1,85 @@
+/* Header
+------------------------------------------------------------*/
+.c-header {
+    @include breakpoint(sp) {
+        // display: block;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        height: 80px;
+        transition: 0.3s ease-in-out;
+        background-color: rgba(255, 255, 255, 1);
+        padding: 14px;
+        .c-iconmenu {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+        }
+    }
+    &__logo{
+        @media only screen and (max-width: 374px){
+            max-width: 220px;
+        }
+    }
+}
+/* Main menu
+------------------------------------------------------------*/
+.c-iconmenu {
+    @include breakpoint(sp) {
+        width: 52px;
+        height: 52px;
+        position: fixed;
+        top: 24px;
+        right: 20px;
+        z-index: 111;
+        text-align: center;
+        cursor: pointer;
+        background: #f2f2f2;
+        border-radius: 4px;
+        padding-top: 12px;
+        &__icon {
+            width: 22px;
+            height: 12px;
+            position: relative;
+            margin: 0 auto 1px;
+            span {
+                width: 100%;
+                height: 2px;
+                background: $mainColor;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: 0.3s ease-in-out;
+                &:nth-child(2) {
+                    top: 48%;
+                }
+                &:nth-child(3) {
+                    top: 100%;
+                }
+            }
+        }
+        &.is-active {
+            .c-iconmenu__icon {
+                span {
+                    &:nth-child(1) {
+                        transform: translate3d(0, 6px, 0) rotate(-45deg);
+                    }
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+                    &:nth-child(3) {
+                        transform: translate3d(0, -6px, 0) rotate(45deg);
+                    }
+                }
+            }
+        }
+        .label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-family: "Poppins", sans-serif;
+            color: $mainColor;
+        }
+    }
+}

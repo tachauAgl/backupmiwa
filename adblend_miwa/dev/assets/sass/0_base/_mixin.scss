@@ -1,0 +1,37 @@
+//============================================
+// clearfix
+//============================================
+@mixin clear {
+	*zoom: 1;
+	&:after{
+		display: block;
+		content: "";
+		clear: both;
+	}
+}
+
+//============================================
+// breakpoint
+//============================================
+@mixin breakpoint($point) {
+	@if $point == bftab {
+		@media only screen and (max-width: 1366px) { @content ; }
+	}
+	@if $point == tablets {
+		@media only screen and (max-width: 1024px) { @content ; }
+	}
+	@else if $point == sp {
+		@media only screen and (max-width: 767px) { @content ; }
+	}
+	@else if $point == spsmall {
+		@media only screen and (max-width: 374px) { @content ; }
+	}
+}
+
+@mixin hover {
+    &:hover {
+        @media screen and (min-width: 767px) {
+            @content;
+        }
+    }
+}

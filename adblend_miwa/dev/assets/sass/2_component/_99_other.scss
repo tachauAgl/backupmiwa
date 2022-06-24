@@ -1,0 +1,475 @@
+/*------------------------------------------------------------
+other
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-mainvisual {
+    position: relative;
+    .image {
+        height: 100vh;
+        @include breakpoint(sp) {
+            height: calc(100vh - 176px);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            font-family: "object-fit: cover";
+        }
+    }
+    .title {
+        position: absolute;
+        right: 4.3%;
+        bottom: 8%;
+        @include breakpoint(sp) {
+            position: relative;
+            right: auto;
+            bottom: auto;
+            background-color: #94c20c;
+            padding: 20px 16px 23px;
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+//-------------------------------------------------------
+.c-box1 {
+    background: $white;
+    border-radius: 32px;
+    padding: 42px 118px 46px;
+    @include breakpoint(bftab) {
+        padding: 40px 20px 45px;
+    }
+    &__ttl {
+        font-size: 1.9rem;
+        font-weight: 700;
+        color: $mainColor;
+        text-align: center;
+    }
+    .c-list4 {
+        margin-top: 16px;
+        @include breakpoint(sp) {
+            margin-top: 22px;
+        }
+    }
+    .label {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #fff;
+        background: #fd7f00;
+        border-radius: 4px;
+        padding: 6px 0;
+        text-align: center;
+        margin-top: 21px;
+        letter-spacing: -0.3px;
+        @include breakpoint(sp) {
+            padding: 5px 16px;
+        }
+    }
+    .c-text1 {
+        margin-top: 30px;
+        @include breakpoint(sp) {
+            margin-top: 23px;
+            font-size: 1.4rem;
+        }
+    }
+    .c-list5 {
+        margin-top: 8px;
+        @include breakpoint(sp) {
+            margin-top: 6px;
+        }
+        + .c-text1 {
+            margin-top: 8px;
+        }
+    }
+}
+
+//-------------------------------------------------------
+.c-box2 {
+    border: 1px solid #94c20c;
+    border-radius: 32px;
+    padding: 41px 117px 47px;
+    @include breakpoint(bftab) {
+        padding: 21px 20px 23px;
+        .c-text1 {
+            font-size: 1.4rem;
+        }
+    }
+    .c-list5 {
+        margin-top: 8px;
+        @include breakpoint(sp) {
+            margin-top: 6px;
+        }
+    }
+    .box {
+        background: #94c20c;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 1.6rem;
+        letter-spacing: -0.3px;
+        margin: 18px 0 0;
+        padding: 18px 32px 26px;
+        @include breakpoint(sp) {
+            font-size: 1.4rem;
+            line-height: 1.7;
+            padding: 13px 16px 17px;
+        }
+
+        .ttl {
+            font-weight: 500;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 10px;
+        }
+        ul {
+            margin: 12px 0 0;
+            @include breakpoint(sp) {
+                margin-top: 14px;
+            }
+            li {
+                position: relative;
+                padding-left: 15px;
+                @include breakpoint(sp) {
+                    margin-top: 5px;
+                }
+                &::before {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background: #fff;
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    @include breakpoint(sp) {
+                        top: 8px;
+                    }
+                }
+            }
+        }
+        a {
+            display: inline-block;
+            position: relative;
+            &[target="_blank"],
+            &[target="blank"] {
+                padding-right: 20px;
+                &::after {
+                    content: "";
+                    width: 15px;
+                    height: 13px;
+                    background: url(../img/common/icon-blank.svg) no-repeat;
+                    background-size: contain;
+                    position: absolute;
+                    bottom: 6px;
+                    right: 0;
+                }
+            }
+            &.tel {
+                pointer-events: none;
+                @include breakpoint(sp) {
+                    pointer-events: visible;
+                }
+            }
+        }
+    }
+}
+
+//-------------------------------------------------------
+.c-address1 {
+    font-size: 1.4rem;
+    letter-spacing: -0.3px;
+    margin: 14px 0 0;
+    color: #fff;
+    @include breakpoint(sp) {
+        line-height: 1.8;
+    }
+    a {
+        pointer-events: none;
+        @include breakpoint(sp) {
+            pointer-events: visible;
+        }
+    }
+}
+
+//-------------------------------------------------------
+.c-add-map {
+    display: flex;
+    margin: 12px 0 0;
+
+    li {
+        font-size: 1.3rem;
+        font-weight: 500;
+        border: 1px solid #ffff;
+        background: #fff;
+        color: $mainColor;
+        margin-right: 7px;
+        line-height: 20px;
+        span {
+            padding: 0 6px;
+            display: inline-block;
+            &:nth-child(2) {
+                background: $mainColor;
+                color: #fff;
+                padding: 0 7px 0 8px;
+                margin-left: -3px;
+            }
+        }
+    }
+}
+
+//-------------------------------------------------------
+.c-btn-contact {
+    width: 100%;
+    max-width: 450px;
+    height: 64px;
+    // margin: 24px auto 0;
+    margin: 24px 0 0;
+    @include breakpoint(sp) {
+        height: 72px;
+        margin: 24px auto 0;
+    }
+    a {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background: #fff;
+        border-radius: 32px;
+        // color: $mainColor;
+        color: #6B9900;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        font-weight: 700;
+
+        @include breakpoint(sp) {
+            flex-flow: column;
+            padding: 6px;
+            justify-content: flex-start;
+            border-radius: 36px;
+        }
+        span {
+            display: block;
+            &.num {
+                font-weight: 600;
+                font-family: "Poppins", sans-serif;
+                font-size: 2.3rem;
+                margin-left: 24px;
+                position: relative;
+                padding-left: 17px;
+                letter-spacing: -0.5px;
+                @include breakpoint(sp) {
+                    line-height: 1;
+                    margin: 4px 0 0;
+                }
+                svg {
+                    position: absolute;
+                    top: 14px;
+                    left: -1px;
+                    @include breakpoint(sp) {
+                        top: 3px;
+                    }
+                }
+            }
+        }
+
+        &[target="_blank"] {
+            span {
+                position: relative;
+                padding-right: 12px;
+               
+                &:after {
+                    content: "";
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='13' viewBox='0 0 15 13'%3E%3Cg id='Group_706' data-name='Group 706' transform='translate(-91 -1060)'%3E%3Cpath id='Path_1649' data-name='Path 1649' d='M105 1061v8H95v-8h10m1-1H94v10h12v-10Z' fill='%236b9900'/%3E%3Cpath id='Path_1650' data-name='Path 1650' d='M102 1072H92v-8h1v-1H91v10h12v-2h-1Z' fill='%236b9900'/%3E%3C/g%3E%3C/svg%3E");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 15px;
+                    height: 13px;
+                    position: absolute;
+                    top: 8px;
+                    right: 1px;
+                    transition: 0.3s ease-in-out;
+                    @include breakpoint(sp) {
+                        top: 5px;
+                    }
+                    @include breakpoint(spsmall) {
+                        width: 13px;
+                        height: 11px;
+                    }
+                }
+            }
+        }
+    }
+    &--mode {
+        a {
+            border: 1px solid #8cb80c;
+            svg{
+                path{
+                    fill: currentColor;
+                }
+            }
+        }
+        @include hover{
+            a{
+                background: #8cb80c;
+                color: #fff;
+                &[target="_blank"] {
+                   span{
+                    &::after{
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='13' viewBox='0 0 15 13'%3E%3Cg id='Group_706' data-name='Group 706' transform='translate(-91 -1060)'%3E%3Cpath id='Path_1649' data-name='Path 1649' d='M105,1061v8H95v-8h10m1-1H94v10h12v-10Z' fill='%23fff'/%3E%3Cpath id='Path_1650' data-name='Path 1650' d='M102,1072H92v-8h1v-1H91v10h12v-2h-1Z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+
+                    }
+                   }
+                }
+            }
+        }
+    }
+    &.pdf {
+        @include breakpoint(sp) {
+            height: 64px;
+            a {
+                justify-content: center;
+                font-size: 1.4rem;
+            }
+        }
+        @include breakpoint(spsmall) {
+            a {
+                font-size: 1.2rem;
+            }
+        }
+        a {
+            font-weight: 500;
+        }
+    }
+}
+
+.c-banLink {
+    padding: 56px 0 60px;
+    border-top: 1px solid #f5fae3;
+    @include breakpoint(sp) {
+        padding: 33px 0 55px;
+    }
+}
+
+.c-mv1 {
+    background: url(../img/common/mv-bg.jpg) no-repeat top center;
+    background-size: cover;
+    padding: 119px 0 124px;
+    @include breakpoint(sp) {
+        padding: 60px 0;
+    }
+    .c-ttl1 {
+        color: $white;
+        font-size: 3.8rem;
+        font-weight: 400;
+        padding-bottom: 10px;
+        @include breakpoint(sp) {
+            font-size: 2.8rem;
+        }
+        &::after {
+            background: $white;
+        }
+    }
+}
+
+.c-sort {
+    display: flex;
+    align-items: center;
+    @include breakpoint(sp) {
+        display: block;
+    }
+    &__btn {
+        width: 90px;
+        height: 40px;
+        flex-shrink: 0;
+        a {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #f2f2f2;
+            color: #333;
+            font-size: 1.6rem;
+            font-weight: 500;
+            background-color: #f2f2f2;
+            border-radius: 4px;
+            // @include hover {
+            //     color: #f7f7f7;
+            //     background-color: #333;
+            // }
+            @include breakpoint(sp) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    &__choose {
+        display: flex;
+        align-items: center;
+        margin-left: 8px;
+        background-color: #f2f2f2;
+        border-radius: 4px;
+        padding: 0 9px 0 11px;
+        flex: 1;
+        @include breakpoint(sp) {
+            // margin: 10px 0 0;
+            margin: 8px 0 0;
+        }
+        > span {
+            font-size: 1.6rem;
+            font-weight: 500;
+            flex-shrink: 0;
+            @include breakpoint(sp) {
+                font-size: 1.4rem;
+            }
+        }
+        .select {
+            min-width: 160px;
+            height: 40px;
+            position: relative;
+            cursor: pointer;
+            font-size: 1.6rem;
+            font-weight: 500;
+            flex: 1;
+            @include breakpoint(sp) {
+                font-size: 1.4rem;
+                min-width: auto;
+            }
+            select {
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+                font-size: 1.6rem;
+                font-weight: 500;
+                line-height: 1.75;
+                letter-spacing: -0.03rem;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                position: relative;
+                color: #333;
+                background-color: #f2f2f2;
+                cursor: pointer;
+                background-image: url(../img/common/arrow-down.svg);
+                background-repeat: no-repeat;
+                background-position: 100% 54%;
+                font-family: "Noto Sans JP", sans-serif;
+                @include breakpoint(sp) {
+                    font-size: 1.4rem;
+                }
+            }
+            option{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.c-banner {
+    margin: 0 auto;
+    max-width: 704px;
+}

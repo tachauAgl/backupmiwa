@@ -1,0 +1,83 @@
+/*------------------------------------------------------------
+btn
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-btn1 {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 233px;
+    height: 64px;
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        background: $white;
+        border: 2px solid $white;
+        border-radius: 32px;
+        font-size: 1.6rem;
+        @include hover {
+            opacity: 1;
+            background: transparent;
+        }
+        svg{
+            path{
+                transition: 0.3s ease-in-out;
+            }
+        }
+    }
+    &--bdr {
+        a {
+            border: 1px solid #94c20c;
+            @include hover {
+                opacity: 1;
+                background: #94c20c;
+                svg{
+                   
+                    path{
+                        fill: currentColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//-------------------------------------------------------
+.c-list-btn {
+    display: flex;
+    justify-content: center;
+    .c-btn1 {
+        margin: 4px;
+        a {
+            span {
+                position: relative;
+                padding-right: 10px;
+            }
+            svg {
+                position: absolute;
+                top: 8px;
+                right: -9px;
+            }
+        }
+    }
+}
+
+//-------------------------------------------------------
+.c-link1 {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 500;
+    position: relative;
+    padding-left: 19px;
+    letter-spacing: -0.03rem;
+    svg{
+        position: absolute;
+        top: 6px;
+        left: 0;
+    }
+}

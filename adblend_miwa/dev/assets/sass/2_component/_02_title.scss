@@ -1,0 +1,153 @@
+/*------------------------------------------------------------
+title
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-ttl1 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    position: relative;
+    text-align: center;
+    padding-bottom: 15px;
+    &::after {
+        content: "";
+        width: 40px;
+        height: 3px;
+        background: $mainColor;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-ttl2 {
+    font-size: 3.8rem;
+    font-weight: 600;
+    color: $mainColor;
+    font-family: "Noto Serif JP", serif;
+    text-align: center;
+    @include breakpoint(tablets){
+        line-height: 1.5;
+    }
+    @include breakpoint(sp) {
+        font-size: 2.8rem;
+        // line-height: 1.6;
+    }
+    &--fz2 {
+        font-size: 2.8rem;
+    }
+    &.noto {
+        letter-spacing: -0.05rem;
+        font-weight: 500;
+        font-family: "Noto Sans JP", sans-serif;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-ttl3 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #333;
+    position: relative;
+    letter-spacing: -0.04rem;
+    padding-left: 18px;
+    @include breakpoint(sp) {
+        font-size: 2rem;
+    }
+    &::before {
+        content: "";
+        width: 12px;
+        height: 3px;
+        background: $mainColor;
+        position: absolute;
+        top: 21px;
+        left: 0;
+        @include breakpoint(sp) {
+            top: 17px;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-ttl4 {
+    font-size: 1.9rem;
+    font-weight: 400;
+    position: relative;
+    padding-left: 18px;
+    letter-spacing: -0.03rem;
+    @include breakpoint(sp) {
+        font-size: 1.6rem;
+    }
+    &::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #94c20c;
+        position: absolute;
+        top: 11px;
+        left: 0;
+    }
+    &--bor {
+        border-bottom: 5px solid #e3f0bc;
+        padding-bottom: 18px;
+        @include breakpoint(sp) {
+            border-bottom-width: 3px;
+            padding-bottom: 8px;
+        }
+    }
+    &--box {
+        background: #94c20c;
+        border-radius: 18px;
+        color: $white;
+        padding: 0 0 3px 28px;
+        @include breakpoint(sp) {
+            padding: 3px 0 3px 28px;
+        }
+        &::before {
+            background: #fff;
+            top: 12px;
+            left: 13px;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-ttl5{
+    background: #A3D60B;
+    color: #fff;
+    letter-spacing: -0.03rem;
+    font-size: 2.8rem;
+    font-weight: 500;
+    padding: 7px 0 8px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 46px;
+    @include breakpoint(sp){
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    &::after{
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 17px 17px 0 17px;
+        border-color: #A3D60B transparent transparent transparent;
+        position: absolute;
+        bottom: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include breakpoint(sp){
+            border-width: 12px 12px 0 12px;
+            bottom: -11px;
+        }
+    }
+}

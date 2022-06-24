@@ -1,0 +1,17 @@
+/*------------------------------------------------------------
+Css of news page
+------------------------------------------------------------*/
+.p-news{
+    &__main{
+        padding: 87px 0 103px;
+        @include breakpoint(sp){
+            padding: 40px 0;
+        }
+        .c-listnews{
+            margin-top: 42px;
+            @include breakpoint(sp){
+                margin-top: 20px;
+            }
+        }
+    }
+}

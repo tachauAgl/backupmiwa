@@ -1,0 +1,219 @@
+/*------------------------------------------------------------
+Css of nosmoking page
+------------------------------------------------------------*/
+.p-nosmoking {
+    &__about {
+        padding: 82px 0 44px;
+        @include breakpoint(sp) {
+            padding: 40px 0 10px;
+        }
+        .c-text2 {
+            margin-top: 23px;
+            @include breakpoint(sp) {
+                margin-top: 16px;
+            }
+        }
+    }
+    &__reason {
+        background: #f7f7f7;
+        padding: 61px 0 78px;
+        @include breakpoint(sp){
+            padding: 30px 0;
+        }
+        .img01 {
+            margin-top: 11px;
+            text-align: center;
+        }
+        .c-text1 {
+            text-align: center;
+            margin: 18px 0 0;
+        }
+    }
+    &__really {
+        padding: 60px 0 78px;
+        @include breakpoint(sp){
+            padding: 40px 0;
+        }
+        .c-text1 {
+            margin-top: 27px;
+            @include breakpoint(sp){
+                margin-top: 15px;
+            }
+        }
+    }
+    &__addiction {
+        padding: 0 0 78px;
+        @include breakpoint(sp){
+            padding: 0 0 40px;
+        }
+        .c-ttl5 {
+            // margin-bottom: 46px;
+            // @include breakpoint(sp){
+            //     margin-bottom: 30px;
+            // }
+        }
+        .c-text1 {
+            margin-top: 28px;
+            @include breakpoint(sp){
+                margin-top: 15px;
+            }
+        }
+        .c-ttl4 {
+            margin-top: 50px;
+            @include breakpoint(sp){
+                margin-top: 25px;
+            }
+            + .c-text1 {
+                margin-top: 23px;
+                @include breakpoint(sp){
+                    margin-top: 15px;
+                }
+            }
+        }
+        .img01 {
+            margin-top: 22px;
+        }
+        .c-note {
+            margin-top: 15px;
+        }
+        .img02 {
+            margin-top: 23px;
+            margin-bottom: 52px;
+            @include breakpoint(sp){
+                margin-bottom: 25px;
+            }
+        }
+        .list1 {
+            padding-left: 88px;
+            margin-top: 32px;
+            position: relative;
+            // &::before {
+            //     content: "";
+            //     width: 20px;
+            //     height: 100%;
+            //     background: linear-gradient(0deg, rgba(163, 219, 0, 1) 0%, rgba(79, 105, 7, 1) 35%);
+            //     position: absolute;
+            //     top: -8px;
+            //     left: 26px;
+            // }
+            // &::after {
+            //     content: "";
+            //     width: 0;
+            //     height: 0;
+            //     border-style: solid;
+            //     border-width: 24px 24.5px 0 24.5px;
+            //     border-color: rgba(163, 219, 0, 1) transparent transparent transparent;
+            //     position: absolute;
+            //     bottom: -4px;
+            //     left: 12px;
+            // }
+            &::before {
+                content: "";
+                width: 49px;
+                height: 102%;
+                background: url(../img/nosmoking/arrow.png) no-repeat;
+                background-size: auto 100%;
+                position: absolute;
+                top: -8px;
+                left: 12px;
+            }
+            li {
+                letter-spacing: -0.03rem;
+                font-weight: 500;
+                border-bottom: 2px solid #e3f0bc;
+                position: relative;
+                min-height: 88px;
+                display: flex;
+                align-items: center;
+                padding: 12px 0;
+                .circle {
+                    width: 84px;
+                    position: absolute;
+                    top: 3px;
+                    left: -91px;
+                }
+            }
+            + .c-text1 {
+                margin-top: 26px;
+                @include breakpoint(sp){
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+    &__method {
+        padding: 0 0 101px;
+        @include breakpoint(sp){
+            padding: 0 0 40px;
+        }
+        .c-ttl5 {
+           // margin-bottom: 46px;
+            // @include breakpoint(sp){
+            //     margin-bottom: 30px;
+            // }
+        }
+        .img01 {
+            margin: 26px 0 0;
+        }
+        .c-ttl4 {
+            margin: 40px 0 18px;
+            @include breakpoint(sp){
+                margin: 20px 0 15px;
+            }
+        }
+        .list-med {
+            background: #f5fae3;
+            border-radius: 16px;
+            margin: 22px 0 39px;
+            padding: 7px 32px 36px;
+            counter-reset: my-sec-counter;
+            @include breakpoint(sp){
+                margin: 20px 0;
+                padding: 7px 16px 18px;
+            }
+            li {
+                border-bottom: 2px solid #e3f0bc;
+                position: relative;
+                padding: 28px 0 21px 50px;
+                &::before {
+                    counter-increment: my-sec-counter;
+                    content: counter(my-sec-counter);
+                    width: 40px;
+                    height: 40px;
+                    background: #a3d60b;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 24px;
+                    left: 0;
+                    font-size: 2.3rem;
+                    font-weight: 700;
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 1;
+                }
+                .ttl {
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    border-bottom: 1px dashed #ccc;
+                    letter-spacing: -0.04rem;
+                    padding-bottom: 13px;
+                    &--no{
+                        border-bottom: none;
+                        padding-bottom: 8px;
+                    }
+                }
+                .c-text1 {
+                    margin-top: 13px;
+                }
+                .c-link1 {
+                    margin-top: 12px;
+                }
+            }
+        }
+        .img02 {
+            margin: 22px 0;
+        }
+    }
+}

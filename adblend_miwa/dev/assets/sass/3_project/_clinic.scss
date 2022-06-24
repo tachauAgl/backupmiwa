@@ -1,0 +1,25 @@
+/*------------------------------------------------------------
+Css of clinic page
+------------------------------------------------------------*/
+.p-clinic {
+    &__content {
+        padding: 25px 0 101px;
+        @include breakpoint(sp) {
+            padding: 25px 0 40px;
+        }
+        ul {
+            li {
+                margin-top: 62px;
+                @include breakpoint(sp){
+                    margin-top: 30px;
+                }
+                .c-ttl3 {
+                    margin-top: 15px;
+                }
+                .c-text1 {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}
